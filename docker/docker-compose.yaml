@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  database:
+    container_name: postgres-telergam
+    image: postgres
+    command: postgres -c 'max_connections=1000'
+    environment:
+      POSTGRES_DB: "pressure_diary"
+      POSTGRES_USER: "telegramuser"
+      POSTGRES_PASSWORD: "telegramuser"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-local-volume:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres-local-volume:
+    driver: local
