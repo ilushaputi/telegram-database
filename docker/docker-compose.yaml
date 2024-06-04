@@ -3,7 +3,6 @@ services:
   database:
     container_name: postgres-telergam
     image: postgres
-    command: postgres -c 'max_connections=1000'
     environment:
       POSTGRES_DB: "pressure_diary"
       POSTGRES_USER: "telegramuser"

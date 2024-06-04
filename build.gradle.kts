@@ -24,6 +24,8 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.liquibase:liquibase-core")
+    implementation("org.postgresql:postgresql:42.5.1")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.0.5")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     annotationProcessor("org.projectlombok:lombok")
